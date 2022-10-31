@@ -101,11 +101,11 @@ app.get('/logout', (req, res)=> {
 })
 
 
-
-const PORT = 3003;
+const PORT = process.env.PORT;
 const server = app.listen(PORT, ()=>{
     console.log(`Servidor escuchando en puerto ${PORT}`);
 })
 server.on('error', error=>{
     console.error(`Error en el servidor ${error}`);
 });
+
